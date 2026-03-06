@@ -7,6 +7,8 @@ int main(){
     cout<< name.size(); //length
     //string manipulation
     name[2]='a'; //single quotation len<1 ie. character //Anashka
+    
+    
     //string traversal and manipulation
     int n= name.size();
     for(int i=0; i<n; i++){
@@ -16,4 +18,13 @@ int main(){
     }
     cout<<toupper(name[0]);//65 returns ASCII value 
     cout<<(char)toupper(name[1]); //N (typecasting) 
+
+
+    //string concatenation
+    string a= "hello";
+    string b = "user";
+    cout<< a + b;
+
+    //extracting a substring
+    cout<<b. substr(0,3); //use
 }
