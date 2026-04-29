@@ -68,7 +68,7 @@ void pat7(int n){
             cout<<"*";
         }
         //space2
-        for(int j=0; j<i; r++){
+        for(int j=0; j<i; j++){
             cout<<" ";
         }
         cout<<endl;
