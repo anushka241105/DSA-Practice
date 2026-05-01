@@ -43,6 +43,7 @@ void explainvector(){    //dynamic in nature as it has dynamic size unlike array
     it1++; //moves to next memory
     cout<<*(it1); //access the value at that particular memory ie. 10
 
+    //cout<< it give the address and cout<< *(it) gives the value stored at that location
     it1 = it1 + 2;
     cout << *(it1); //prints 6
 
@@ -56,11 +57,21 @@ void explainvector(){    //dynamic in nature as it has dynamic size unlike array
     cout<< a.back() <<" "; //gives the last element of the vector
 
     //classic iterator
-    for(vector <int> :: iterator it =a.begin(); it != a.end(); it++)
+    for(vector <int> :: iterator it =a.begin(); it != a.end(); it++){
+        cout<<*(it);
+    }
 
     //modern iterator
-    for(auto it= a.begin(); it != a.end(); it++)  //auto completely replaces - vector <int> :: iterator
+    for(auto it= a.begin(); it != a.end(); it++){
+        cout<<*(it);
+    }  //auto completely replaces - vector <int> :: iterator
 
+    //range based-loop
+    for(auto it: a){
+        cout<<it<<endl;
+    }
+
+    //erase single and range elements
     
 
 
