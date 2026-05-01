@@ -38,6 +38,30 @@ void explainvector(){    //dynamic in nature as it has dynamic size unlike array
     vector <int> v2(5);  //{0,0,0,0,0} will consider 0 as the default value
     vector <int> v3(v2); //{0,0,0,0,0} not same as v2 but another copy of v2 store in v3
 
+    vector<int> a = { 20 , 10 , 15 , 6 , 7 };
+    vector<int> :: iterator it1= a.begin();   //memory of 20
+    it1++; //moves to next memory
+    cout<<*(it1); //access the value at that particular memory ie. 10
+
+    it1 = it1 + 2;
+    cout << *(it1); //prints 6
+
+    //MORE ITERATORS
+    vector<int> :: iterator it2 = a.end(); //{ 20 , 10 , 15 , 6 , 7, _ } so it will point to somewhere next to 7(end), which does'nt exist as of now
+    it2--; //will print 7
+    vector<int> :: reverse_iterator it3 = a.rend(); // {7,6,15,10,20,_} so iy will point to the next of the reversed a vector
+    vector<int> :: reverse_iterator it4= a.rbegin(); //{7,6,15,10,20} so it will begin with 20
+
+    cout<< a[0] <<" " << a.at(0);  //will give elements at 0th index
+    cout<< a.back() <<" "; //gives the last element of the vector
+
+    //classic iterator
+    for(vector <int> :: iterator it =a.begin(); it != a.end(); it++)
+
+    //modern iterator
+    for(auto it= a.begin(); it != a.end(); it++)  //auto completely replaces - vector <int> :: iterator
+
+    
 
 
 }
