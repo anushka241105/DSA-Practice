@@ -68,10 +68,18 @@ void explainvector(){    //dynamic in nature as it has dynamic size unlike array
 
     //range based-loop
     for(auto it: a){
-        cout<<it<<endl;
+        cout<<it<<endl;  //here it prints direct values no need of *(it)
     }
 
     //erase single and range elements
+    a.erase(a.begin()); //{10,15,6,7}
+    a.erase(a.begin()+1); //{20,15,6,7}
+    a.erase(a.begin(),a.begin()+3); //to erase in range
+
+    //insert elements
+    vector <int> x{2,100}; //{100, 100}   
+    x.insert(x.begin(), 300);  //{300, 100, 100} 
+    x.insert(x.begin()+1, 2, 50); //{300, 50, 50, 100, 100} this shows {where to insert, how many times to insert, what to insert}
     
 
 
