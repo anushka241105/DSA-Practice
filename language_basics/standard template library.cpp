@@ -11,6 +11,7 @@ using namespace std;
 //3> Iterators [begin, end, rbegin, rbend]
 //4> Function objects
 
+//PAIRS
 
 void explainpair(){   //pair can also be a data type
     
@@ -21,6 +22,8 @@ void explainpair(){   //pair can also be a data type
     pair <int, int> arr[] = {{1,2}, {3,4}, {5,6}};   //lies inside the utility library
     cout << arr[1].second;
 }
+
+//VECTORS
 
 void explainvector(){    //dynamic in nature as it has dynamic size unlike arrays, but has contagious memory locations
 
@@ -81,8 +84,50 @@ void explainvector(){    //dynamic in nature as it has dynamic size unlike array
     x.insert(x.begin(), 300);  //{300, 100, 100} 
     x.insert(x.begin()+1, 2, 50); //{300, 50, 50, 100, 100} this shows {where to insert, how many times to insert, what to insert}
     
+    cout<<x.size(); //2
+    x.pop_back(); //{100}
+    x.swap(a);  // v= { 20 , 10 , 15 , 6 , 7 } and a = {100,100}
+    x.clear(); //clears entire vector
+    cout<< v.empty();
+}
+
+//push_back/puch_front involve copying and moving 
+//empace_back/emplace_front avoids extra copying/moving by constructing in place
 
 
+//LISTS
+
+void explainlists(){
+    list<int> ls;
+    ls.push_back(11); //{11}
+    ls.emplace_back(2); //{11,2}
+    ls.push_front(1); //{1,11,2}
+    ls.emplace_front(3); //{3,1,11,2}
+}
+
+
+//DEQUES
+
+void explaindeque(){
+    deque<int> dq;
+    dq.push_front(2); //{2}
+    dq.push_back(3); //{2,3}
+    dq.emplace_back(3); //{2,3,3}
+}
+
+
+//STACKS
+
+void explainstacks(){
+    stack<int> st;
+    st.push(1); //{1}
+    st.push(2); //{2,1}
+    st.push(3); //{3,2,1}
+    st.push(4); //{4,3,2,1}
+    st.emplace(5); //{5,4,3,2,1}
+    cout << st.top(); //prints 5, indexing is not supported in stack so st[0] is invalid
+    st.pop(); //{4,3,2,1}
+    
 }
 int main(){
 
